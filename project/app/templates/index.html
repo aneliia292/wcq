@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Доставка еды</title>
+</head>
+<body>
+<div style="text-align: center;font-size: 20px">
+    <h1>Наше меню</h1>
+    {% for el in Food %}
+
+    <p> Блюда:<br> {{ el.name }}</p>
+    <p>Состав:<br>{{ el.about }}</p>
+    <p>Цена:<br>{{ el.price }}</p>
+    <p>Категория:<br>{{ el.category }}</p>
+    <hr>
+    {% endfor %}
+    <button><a style="text-decoration: none; color: black" href="{% url 'order' %}">Сделать заказ</a></button>
+</div>
+</body>
+</html>

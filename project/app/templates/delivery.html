@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заказ</title>
+</head>
+<body>
+<div style="text-align: center; margin-top: 200px;">
+    <h1 Просмотрите меню и сделайте заказ></h1>
+    <form action="" method="post">
+      {% csrf_token %}
+        <div style="font-size: 25px;margin-bottom: 20px">
+      {{ form }}
+        </div>
+    <button >Заказать</button>
+      <button><a style="text-decoration: none; color: black" href="{% url 'index' %}">Вернуться к меню</a></button>
+    </form>
+</div>
+</body>
+</html>

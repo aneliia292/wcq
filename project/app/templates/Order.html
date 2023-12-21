@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Заказ доставки</title>
+</head>
+<body>
+    <div style=" text-align: center; margin-top: 100px">
+        <button><a style="text-decoration: none; color: black" href="{% url 'index' %}">Вернуться к меню</a></button>
+        {% for el in order %}
+        <h1>Ваши Заказы</h1>
+        <p> Блюда:<br> {{ el.food_delivery }}</p>
+        <p>Количество:<br>{{ el.kolvo }}</p>
+        <p>Цена:<br>{{ el.price_delivery }}</p>
+        <button><a style="text-decoration: none; color: black" href="{% url 'delete' el.id %}">Удалить заказ</a><button>
+        <hr>
+        <button><a style="text-decoration: none; color: black" href="{% url 'delivery' %}">Сделать заказ</a></button>
+        {% endfor %}
+    </div>
+</body>
+</html>
